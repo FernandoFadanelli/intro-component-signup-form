@@ -1,0 +1,248 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  align-items: center;
+  background-color: var(--red);
+  background-image: url("images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ####################
+        Fonts
+####################### */
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ####################
+  Containers position
+####################### */
+.main-container {
+  display: flex;
+  height: 550px;
+  width: 1100px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+}
+
+.cards-container {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+/* ####################
+      Trial style
+####################### */
+.trial-container {
+  text-align: center;
+  background-color: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.trial-container span {
+  font-weight: 600;
+}
+
+/* ####################
+    Form styles
+####################### */
+.form-container {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+  color: var(--grayish-blue);
+  display: flex;
+  height: 470px;
+  justify-content: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.input-group {
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.input-group input {
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: var(--dark-blue);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 50px;
+  padding: 0 0 0 30px;
+  width: 100%;
+}
+
+.input-group input:focus {
+  border: 1px solid var(--blue);
+  outline: none;
+}
+
+.input-group.error input{
+  border: 2px solid var(--red);
+}
+
+/* Alert icon positioning */
+.input-group img {
+  position: absolute;
+  top: 13px;
+  right: 30px;
+}
+
+/* Alert text style and positioning */
+.input-group small {
+  color: var(--red);
+  font-size: 0.6rem;
+  font-style: italic;
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Hidding all alerts */
+.input-group .alert {
+  visibility: hidden;
+}
+
+/* Button styles */
+.input-group button {
+  background-color: var(--green);
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px 0px #30B179;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  height: 50px;
+}
+
+.input-group button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* Changing the style of the small text below the button */
+.input-group:last-child{
+  text-align: center;
+}
+
+.input-group:last-child small {
+  color: lightgray;
+  font-style: normal;
+  font-size: 0.6rem;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 60px;
+}
+
+small span {
+  color: var(--red);
+}
+
+/* Change visibility of alerts when the error class is added to input-group */
+.input-group.error .alert {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+    height: auto;
+    overflow: auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .main-container {
+    flex-direction: column;
+    height: auto;
+    margin: 50px 25px;
+    width: 375px;
+  }
+
+  .text-container {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .cards-container {
+    width: 100%;
+  }
+
+  .trial-container {
+    margin-bottom: 25px;
+  }
+
+  .trial-container p {
+    display: inline-block;
+    width: 60%;
+  }
+
+  .form-container form {
+    height: 90%;
+    width: 90%;
+  }
+
+  .input-group:last-child{
+    padding-bottom: 40px;
+  }
+
+  .input-group:last-child small {
+    width: 75%;
+    left: 38px;
+  }
+
+}

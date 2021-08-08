@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Flavicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Style sheet -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <div class="main-container">
+
+    <div class="text-container">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+      but understanding how developers think is invaluable.</p>
+    </div>
+
+    <div class="cards-container">
+      <div class="trial-container">
+        <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
+
+      <div class="form-container">
+
+        <form class="signup-form" action="index.js" method="post" novalidate>
+          <div class="input-group first-name">
+            <input type="text" name="firstName" placeholder="First Name">
+            <div class="alert">
+              <img src="images/icon-error.svg" alt="error icon">
+              <small>First Name cannot be empty</small>
+            </div>
+          </div>
+
+          <div class="input-group last-name">
+            <input type="text" name="lastName" placeholder="Last Name">
+            <div class="alert">
+              <img src="images/icon-error.svg" alt="error icon">
+              <small>Last Name cannot be empty</small>
+            </div>
+          </div>
+
+          <div class="input-group email">
+            <input type="email" name="email" placeholder="Email">
+            <div class="alert">
+              <img src="images/icon-error.svg" alt="error icon">
+              <small>Error message</small>
+            </div>
+          </div>
+
+          <div class="input-group password">
+            <input type="password" name="password" placeholder="Password">
+            <div class="alert">
+              <img src="images/icon-error.svg" alt="error icon">
+              <small>Password cannot be empty</small>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <button type="submit" name="submit">CLAIM YOUR FREE TRIAL</button>
+            <small class="terms-and-services">By clicking the button, you are agreeing to our <span>Terms and Services</span></small>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
